@@ -62,7 +62,8 @@ namespace WebAppMVC
 
                 endpoints.MapGet("slay", async context =>
                 {
-                    await context.Response.WriteAsync("Слава изучает ASP");
+                    context.Response.ContentType = "text/html; charset=utf-8";
+                    await context.Response.WriteAsync("<h1 align=\"center\">Слава изучает ASP</h1>");
                 });
             });
         }
